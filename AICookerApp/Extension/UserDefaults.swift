@@ -30,4 +30,15 @@ extension UserDefaults {
             UserDefaults.standard.synchronize()
         }
     }
+    
+    public static var showMain: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: "premiumKey")
+        }
+        set {
+            guard UserDefaults.standard.bool(forKey: "premiumKey") != newValue else { return }
+            UserDefaults.standard.set(newValue, forKey: "premiumKey")
+            UserDefaults.standard.synchronize()
+        }
+    }
 }

@@ -24,8 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let router = RootRouter(navigationController: nav)
         
-        let onboarding = OnboardingModuleBuilder.build()
-        router.setRoot(onboarding, animated: false)
+        let presentedVC = UserDefaults.showMain ? TabModuleBuilder.build() : OnboardingModuleBuilder.build()
+        router.setRoot(presentedVC, animated: false)
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

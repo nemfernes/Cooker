@@ -26,6 +26,30 @@ extension UIImage {
         case tab1Inactive
         case tab2Inactive
         case tab3Inactive
+        case carrotIcon
+        case cheeseIcon
+        case chefHatIcon
+        case coffeeIcon
+        case drinksIcon
+        case lollipopIcon
+        case meatIcon
+        case soupIcon
+        case noFoodsImage
+        case appetizersImage
+        case breakfastImage
+        case dessertsImage
+        case drinksImage
+        case mainCousineImage
+        case saladsImage
+        case soupImage
+        case mailIcon
+        case arrowIcon
+        case privacyIcon
+        case restoreIcon
+        case shareIcon
+        case termsIcon
+        case arrowBackIcon
+        case defaultFoodImage
     }
     
     static func asset(_ name: Asset) -> UIImage {

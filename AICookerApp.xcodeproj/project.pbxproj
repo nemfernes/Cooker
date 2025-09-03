@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0E97652E68AED10053D4FF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 0A0E97642E68AED10053D4FF /* Realm */; };
+		0A0E97672E68AED10053D4FF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0A0E97662E68AED10053D4FF /* RealmSwift */; };
+		0A0E97692E68AEE20053D4FF /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E97682E68AEE20053D4FF /* DatabaseManager.swift */; };
 		0A4DC4182E65BD2A003C948E /* Adapty in Frameworks */ = {isa = PBXBuildFile; productRef = 0A4DC4172E65BD2A003C948E /* Adapty */; };
 		0A4DC41A2E65BD2A003C948E /* AdaptyUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0A4DC4192E65BD2A003C948E /* AdaptyUI */; };
 		0A4DC41C2E65BD46003C948E /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4DC41B2E65BD46003C948E /* UserDefaults.swift */; };
@@ -58,6 +61,19 @@
 		0A4DC4DB2E664B11003C948E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4DC4D82E664B11003C948E /* SettingsViewController.swift */; };
 		0A4DC4DE2E665143003C948E /* TabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DC4DD2E665143003C948E /* TabViewController.xib */; };
 		0A4DC4DF2E665143003C948E /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4DC4DC2E665143003C948E /* TabViewController.swift */; };
+		0AB0E3652E685F320016B978 /* TabModulerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0E3642E685F320016B978 /* TabModulerBuilder.swift */; };
+		0AB0E37A2E686B350016B978 /* SettingsModulerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0E3782E686B350016B978 /* SettingsModulerBuilder.swift */; };
+		0AB0E37B2E686B350016B978 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0E3792E686B350016B978 /* SettingsRouter.swift */; };
+		0AB0E37F2E686CAF0016B978 /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB0E37E2E686CAF0016B978 /* SettingView.xib */; };
+		0AB0E3802E686CAF0016B978 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0E37D2E686CAF0016B978 /* SettingView.swift */; };
+		0AB0E3832E687F260016B978 /* DishesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0E3822E687F260016B978 /* DishesRouter.swift */; };
+		0AB0E3842E687F260016B978 /* DishesModulerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0E3812E687F260016B978 /* DishesModulerBuilder.swift */; };
+		0AB0E3882E6881C80016B978 /* DishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB0E3862E6881C80016B978 /* DishView.xib */; };
+		0AB0E3892E6881C80016B978 /* DishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0E3852E6881C80016B978 /* DishView.swift */; };
+		0AB0E3922E68A22B0016B978 /* DishesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB0E3902E68A22B0016B978 /* DishesListViewController.xib */; };
+		0AB0E3952E68A22B0016B978 /* DishesListModulerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0E38D2E68A22B0016B978 /* DishesListModulerBuilder.swift */; };
+		0AB0E3962E68A22B0016B978 /* DishesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0E38F2E68A22B0016B978 /* DishesListViewController.swift */; };
+		0AB0E3972E68A22B0016B978 /* DishesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0E38E2E68A22B0016B978 /* DishesListRouter.swift */; };
 		0AC8499E2E65BB140058825B /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC849912E65BB140058825B /* OnboardingViewController.xib */; };
 		0AC8499F2E65BB140058825B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC849942E65BB140058825B /* Assets.xcassets */; };
 		0AC849A12E65BB140058825B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC849972E65BB140058825B /* LaunchScreen.storyboard */; };
@@ -72,6 +88,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A0E97682E68AEE20053D4FF /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		0A4DC41B2E65BD46003C948E /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		0A4DC41D2E65BD60003C948E /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
 		0A4DC4212E65BDF6003C948E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -194,6 +211,19 @@
 		0A4DC4D92E664B11003C948E /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		0A4DC4DC2E665143003C948E /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		0A4DC4DD2E665143003C948E /* TabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabViewController.xib; sourceTree = "<group>"; };
+		0AB0E3642E685F320016B978 /* TabModulerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModulerBuilder.swift; sourceTree = "<group>"; };
+		0AB0E3782E686B350016B978 /* SettingsModulerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModulerBuilder.swift; sourceTree = "<group>"; };
+		0AB0E3792E686B350016B978 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		0AB0E37D2E686CAF0016B978 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		0AB0E37E2E686CAF0016B978 /* SettingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
+		0AB0E3812E687F260016B978 /* DishesModulerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesModulerBuilder.swift; sourceTree = "<group>"; };
+		0AB0E3822E687F260016B978 /* DishesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesRouter.swift; sourceTree = "<group>"; };
+		0AB0E3852E6881C80016B978 /* DishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishView.swift; sourceTree = "<group>"; };
+		0AB0E3862E6881C80016B978 /* DishView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishView.xib; sourceTree = "<group>"; };
+		0AB0E38D2E68A22B0016B978 /* DishesListModulerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesListModulerBuilder.swift; sourceTree = "<group>"; };
+		0AB0E38E2E68A22B0016B978 /* DishesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesListRouter.swift; sourceTree = "<group>"; };
+		0AB0E38F2E68A22B0016B978 /* DishesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesListViewController.swift; sourceTree = "<group>"; };
+		0AB0E3902E68A22B0016B978 /* DishesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishesListViewController.xib; sourceTree = "<group>"; };
 		0AC849692E65BA020058825B /* AICookerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AICookerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC8498E2E65BB140058825B /* OnboardingModulerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModulerBuilder.swift; sourceTree = "<group>"; };
 		0AC8498F2E65BB140058825B /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
@@ -214,10 +244,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A0E97672E68AED10053D4FF /* RealmSwift in Frameworks */,
 				0A4DC4AD2E6628CA003C948E /* SwiftyStoreKit in Frameworks */,
 				0A4DC4182E65BD2A003C948E /* Adapty in Frameworks */,
 				0A4DC41A2E65BD2A003C948E /* AdaptyUI in Frameworks */,
 				0A4DC4C32E663A6D003C948E /* StoreKit.framework in Frameworks */,
+				0A0E97652E68AED10053D4FF /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +262,7 @@
 				0A4DC4AE2E6628E9003C948E /* Subscription */,
 				0AC8499A2E65BB140058825B /* RootRouter.swift */,
 				0A4DC4B22E6629FA003C948E /* AdaptyService.swift */,
+				0A0E97682E68AEE20053D4FF /* DatabaseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -237,6 +270,7 @@
 		0A4DC4202E65BDCA003C948E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0AB0E3912E68A22B0016B978 /* DishesListModule */,
 				0A4DC4D72E664AF1003C948E /* SettingsModule */,
 				0A4DC4D22E664AC5003C948E /* DishesModule */,
 				0A4DC4CD2E664A7A003C948E /* AICookingModule */,
@@ -339,6 +373,7 @@
 		0A4DC4C72E664799003C948E /* TabBarModule */ = {
 			isa = PBXGroup;
 			children = (
+				0AB0E3642E685F320016B978 /* TabModulerBuilder.swift */,
 				0A4DC4DC2E665143003C948E /* TabViewController.swift */,
 				0A4DC4DD2E665143003C948E /* TabViewController.xib */,
 			);
@@ -357,6 +392,9 @@
 		0A4DC4D22E664AC5003C948E /* DishesModule */ = {
 			isa = PBXGroup;
 			children = (
+				0AB0E3872E6881C80016B978 /* View */,
+				0AB0E3812E687F260016B978 /* DishesModulerBuilder.swift */,
+				0AB0E3822E687F260016B978 /* DishesRouter.swift */,
 				0A4DC4D32E664ADE003C948E /* DishesViewController.swift */,
 				0A4DC4D42E664ADE003C948E /* DishesViewController.xib */,
 			);
@@ -366,10 +404,42 @@
 		0A4DC4D72E664AF1003C948E /* SettingsModule */ = {
 			isa = PBXGroup;
 			children = (
+				0AB0E37C2E686CA50016B978 /* View */,
+				0AB0E3782E686B350016B978 /* SettingsModulerBuilder.swift */,
+				0AB0E3792E686B350016B978 /* SettingsRouter.swift */,
 				0A4DC4D82E664B11003C948E /* SettingsViewController.swift */,
 				0A4DC4D92E664B11003C948E /* SettingsViewController.xib */,
 			);
 			path = SettingsModule;
+			sourceTree = "<group>";
+		};
+		0AB0E37C2E686CA50016B978 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AB0E37D2E686CAF0016B978 /* SettingView.swift */,
+				0AB0E37E2E686CAF0016B978 /* SettingView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0AB0E3872E6881C80016B978 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AB0E3852E6881C80016B978 /* DishView.swift */,
+				0AB0E3862E6881C80016B978 /* DishView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0AB0E3912E68A22B0016B978 /* DishesListModule */ = {
+			isa = PBXGroup;
+			children = (
+				0AB0E38D2E68A22B0016B978 /* DishesListModulerBuilder.swift */,
+				0AB0E38E2E68A22B0016B978 /* DishesListRouter.swift */,
+				0AB0E38F2E68A22B0016B978 /* DishesListViewController.swift */,
+				0AB0E3902E68A22B0016B978 /* DishesListViewController.xib */,
+			);
+			path = DishesListModule;
 			sourceTree = "<group>";
 		};
 		0AC849602E65BA020058825B = {
@@ -455,6 +525,8 @@
 				0A4DC4172E65BD2A003C948E /* Adapty */,
 				0A4DC4192E65BD2A003C948E /* AdaptyUI */,
 				0A4DC4AC2E6628CA003C948E /* SwiftyStoreKit */,
+				0A0E97642E68AED10053D4FF /* Realm */,
+				0A0E97662E68AED10053D4FF /* RealmSwift */,
 			);
 			productName = AICookerApp;
 			productReference = 0AC849692E65BA020058825B /* AICookerApp.app */;
@@ -524,6 +596,7 @@
 			packageReferences = (
 				0A4DC4162E65BD2A003C948E /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */,
 				0A4DC4AB2E6628CA003C948E /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
+				0A0E97632E68AED10053D4FF /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0AC8496A2E65BA020058825B /* Products */;
@@ -540,6 +613,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB0E3882E6881C80016B978 /* DishView.xib in Resources */,
 				0A4DC4262E65BE2F003C948E /* Localizable.strings in Resources */,
 				0A4DC48A2E65CA20003C948E /* Poppins-SemiBold.ttf in Resources */,
 				0A4DC48B2E65CA20003C948E /* Poppins-ExtraLightItalic.ttf in Resources */,
@@ -556,6 +630,7 @@
 				0A4DC4952E65CA20003C948E /* Poppins-Medium.ttf in Resources */,
 				0A4DC4A32E65CE01003C948E /* InteractiveWelcomeView.xib in Resources */,
 				0A4DC4D02E664A9F003C948E /* AICookingViewController.xib in Resources */,
+				0AB0E37F2E686CAF0016B978 /* SettingView.xib in Resources */,
 				0A4DC4962E65CA20003C948E /* Poppins-SemiBoldItalic.ttf in Resources */,
 				0A4DC4972E65CA20003C948E /* Poppins-MediumItalic.ttf in Resources */,
 				0A4DC4982E65CA20003C948E /* Poppins-LightItalic.ttf in Resources */,
@@ -564,6 +639,7 @@
 				0A4DC4D52E664ADE003C948E /* DishesViewController.xib in Resources */,
 				0A4DC49A2E65CA20003C948E /* Poppins-Black.ttf in Resources */,
 				0A4DC49B2E65CA20003C948E /* Poppins-Bold.ttf in Resources */,
+				0AB0E3922E68A22B0016B978 /* DishesListViewController.xib in Resources */,
 				0A4DC4DA2E664B11003C948E /* SettingsViewController.xib in Resources */,
 				0A4DC49C2E65CA20003C948E /* Poppins-Regular.ttf in Resources */,
 				0AC8499E2E65BB140058825B /* OnboardingViewController.xib in Resources */,
@@ -586,10 +662,16 @@
 				0A4DC4B12E662901003C948E /* SubscriptionModel.swift in Sources */,
 				0A4DC4C02E66368D003C948E /* BaseViewController.swift in Sources */,
 				0A4DC4D12E664A9F003C948E /* AICookingViewController.swift in Sources */,
+				0AB0E37A2E686B350016B978 /* SettingsModulerBuilder.swift in Sources */,
+				0AB0E37B2E686B350016B978 /* SettingsRouter.swift in Sources */,
 				0A4DC4A22E65CE01003C948E /* InteractiveWelcomeView.swift in Sources */,
+				0AB0E3832E687F260016B978 /* DishesRouter.swift in Sources */,
+				0AB0E3892E6881C80016B978 /* DishView.swift in Sources */,
+				0AB0E3842E687F260016B978 /* DishesModulerBuilder.swift in Sources */,
 				0A4DC4B92E662ACB003C948E /* PremiumModulerBuilder.swift in Sources */,
 				0A4DC4BA2E662ACB003C948E /* PremiumRouter.swift in Sources */,
 				0A4DC4BB2E662ACB003C948E /* PremiumViewController.swift in Sources */,
+				0A0E97692E68AEE20053D4FF /* DatabaseManager.swift in Sources */,
 				0A4DC41E2E65BD60003C948E /* SubscriptionService.swift in Sources */,
 				0AC849AB2E65BB250058825B /* UIImage.swift in Sources */,
 				0A4DC4DF2E665143003C948E /* TabViewController.swift in Sources */,
@@ -603,10 +685,15 @@
 				0AC849A62E65BB140058825B /* AppDelegate.swift in Sources */,
 				0A4DC49E2E65CB06003C948E /* UIFont.swift in Sources */,
 				0A4DC41C2E65BD46003C948E /* UserDefaults.swift in Sources */,
+				0AB0E3652E685F320016B978 /* TabModulerBuilder.swift in Sources */,
+				0AB0E3952E68A22B0016B978 /* DishesListModulerBuilder.swift in Sources */,
+				0AB0E3962E68A22B0016B978 /* DishesListViewController.swift in Sources */,
+				0AB0E3972E68A22B0016B978 /* DishesListRouter.swift in Sources */,
 				0A4DC4D62E664ADE003C948E /* DishesViewController.swift in Sources */,
 				0AC849A72E65BB140058825B /* RootRouter.swift in Sources */,
 				0AC849A82E65BB140058825B /* SceneDelegate.swift in Sources */,
 				0A4DC4A52E65CE13003C948E /* NibView.swift in Sources */,
+				0AB0E3802E686CAF0016B978 /* SettingView.swift in Sources */,
 				0A4DC4DB2E664B11003C948E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -908,6 +995,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0A0E97632E68AED10053D4FF /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		0A4DC4162E65BD2A003C948E /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/adaptyteam/AdaptySDK-iOS.git";
@@ -927,6 +1022,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0A0E97642E68AED10053D4FF /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A0E97632E68AED10053D4FF /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		0A0E97662E68AED10053D4FF /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A0E97632E68AED10053D4FF /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		0A4DC4172E65BD2A003C948E /* Adapty */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0A4DC4162E65BD2A003C948E /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */;

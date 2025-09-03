@@ -52,11 +52,10 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajM-x2-ihk">
                                             <rect key="frame" x="0.0" y="0.0" width="131" height="56"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="ajM-x2-ihk" firstAttribute="top" secondItem="2yX-JB-kHk" secondAttribute="top" id="G8N-tZ-7ba"/>
                                         <constraint firstItem="EDV-O1-xrw" firstAttribute="centerX" secondItem="2yX-JB-kHk" secondAttribute="centerX" id="IgM-uW-Del"/>
@@ -86,11 +85,10 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w18-8H-UaW">
                                             <rect key="frame" x="0.0" y="0.0" width="131" height="56"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="w18-8H-UaW" firstAttribute="top" secondItem="QWb-f6-va5" secondAttribute="top" id="9KE-ei-OQI"/>
                                         <constraint firstItem="RrL-dj-hKH" firstAttribute="top" secondItem="ir7-yU-CrP" secondAttribute="bottom" constant="5" id="CTo-5i-aVU"/>
@@ -120,11 +118,10 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vo-8s-L0g">
                                             <rect key="frame" x="0.0" y="0.0" width="131" height="56"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="f2A-FI-8av" firstAttribute="centerX" secondItem="tA8-gj-Avt" secondAttribute="centerX" id="ACy-32-4KU"/>
                                         <constraint firstItem="f2A-FI-8av" firstAttribute="top" secondItem="1ul-t6-61i" secondAttribute="bottom" constant="5" id="FSe-G5-JXW"/>
@@ -142,7 +139,7 @@
                             </constraints>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="5xC-tM-5Oc" firstAttribute="leading" secondItem="3Mw-EC-q40" secondAttribute="leading" id="SpT-qK-V92"/>
                         <constraint firstAttribute="height" constant="103" id="W9s-0p-t9h"/>

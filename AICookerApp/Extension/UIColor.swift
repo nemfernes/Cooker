@@ -15,6 +15,7 @@ extension UIColor {
         case color_18181C
         case color_71B94D
         case color_1E1E1E
+        case color_BABAC1
     }
 
     static func asset(_ name: Asset,

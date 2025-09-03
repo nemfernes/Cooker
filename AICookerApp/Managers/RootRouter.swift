@@ -58,8 +58,8 @@ extension RootRouter {
         push(vc, animated: true)
     }
     
-    func openTranslate() {
-//        let vc = TranslateViewController()
-//        push(vc, animated: true)
+    func openTab() {
+        let vc = TabModuleBuilder.build()
+        push(vc, animated: true)
     }
 }

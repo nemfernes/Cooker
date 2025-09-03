@@ -94,12 +94,7 @@ public extension UIFont {
     static var sfMedium10: UIFont! { return .getFont(size: 10, family: .poppins, style: .medium) }
     static var sfMedium9: UIFont! { return .getFont(size: 9, family: .poppins, style: .medium) }
 
-    static var geometriaMedium20: UIFont! { return .getFont(size: 20, family: .poppins, style: .medium) }
-    static var geometriaRegular24: UIFont! { return .getFont(size: 24, family: .poppins, style: .regular) }
-    static var geometriaRegular18: UIFont! { return .getFont(size: 18, family: .poppins, style: .regular) }
-    static var geometriaRegular15: UIFont! { return .getFont(size: 15, family: .poppins, style: .regular) }
-    static var geometriaRegular12: UIFont! { return .getFont(size: 12, family: .poppins, style: .regular) }
-    static var geometriaRegular16: UIFont! { return .getFont(size: 16, family: .poppins, style: .regular) }
+    static var sfLight16: UIFont! { return .getFont(size: 16, family: .poppins, style: .light) }
 
     static var sfItalic15: UIFont! { return .getFont(size: 15, family: .poppins, style: .italic) }
 }

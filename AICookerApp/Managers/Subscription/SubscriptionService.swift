@@ -182,12 +182,11 @@ public class SubscriptionService: NSObject {
     }
 
     public func retrieveProductInfo(appProduct: AppProduct) async throws -> Subscription {
-            // Если уже есть в кеше — сразу возвращаем
+            
             if let cached = getStoreProduct(from: appProduct) {
                 return cached
             }
             
-            // Запрашиваем продукт из StoreKit2
             let products = try await Product.products(for: [appProduct.rawValue])
             
             guard let product = products.first else {
@@ -203,8 +202,7 @@ public class SubscriptionService: NSObject {
             priceLocale: .current, // StoreKit2 пока не даёт Locale напрямую
             duration: .from(subscriptionPeriod: product.subscription?.subscriptionPeriod)
         )
-            
-            // Сохраняем в кеш
+        
             setStoreProduct(subscription, for: appProduct)
             
             return subscription
