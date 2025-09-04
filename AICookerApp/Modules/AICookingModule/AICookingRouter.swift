@@ -9,12 +9,11 @@ import Foundation
 import MessageUI
 import UIKit
 
-protocol DishesListRouterProtocol {
+protocol AICookingRouterProtocol {
     func close()
-    func goToDish(dish: Dish?)
 }
 
-final class DishesListRouter: NSObject, DishesListRouterProtocol {
+final class AICookingRouter: AICookingRouterProtocol {
     
     weak var viewController: UIViewController?
     
@@ -22,12 +21,6 @@ final class DishesListRouter: NSObject, DishesListRouterProtocol {
         self.viewController = viewController
     }
   
-    func goToDish(dish: Dish?) {
-        let nextVC = DishCreateEditModuleBuilder.build(dish: dish)
-        nextVC.modalPresentationStyle = .fullScreen
-        viewController?.present(nextVC, animated: true)
-       
-    }
     
     func close() {
         if let nav = viewController?.navigationController {

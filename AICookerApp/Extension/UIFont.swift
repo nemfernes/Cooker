@@ -68,6 +68,7 @@ public extension UIFont {
     static var sfSemiBold18: UIFont! { return .getFont(size: 18, family: .poppins, style: .semiBold) }
     static var sfSemiBold16: UIFont! { return .getFont(size: 16, family: .poppins, style: .semiBold) }
     static var sfSemiBold15: UIFont! { return .getFont(size: 15, family: .poppins, style: .semiBold) }
+    static var sfSemiBold14: UIFont! { return .getFont(size: 14, family: .poppins, style: .semiBold) }
     static var sfSemiBold13: UIFont! { return .getFont(size: 13, family: .poppins, style: .semiBold) }
     static var sfSemiBold11: UIFont! { return .getFont(size: 11, family: .poppins, style: .semiBold) }
 

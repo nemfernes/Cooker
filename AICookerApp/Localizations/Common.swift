@@ -68,7 +68,9 @@ public extension LS.Common {
         case step = "LS.Common.Strings.step"
         case finelyChop = "LS.Common.Strings.finelyChop"
         case addStep = "LS.Common.Strings.addStep"
-
+        case alert = "LS.Common.Strings.alert"
+        case alertCancel = "LS.Common.Strings.alertCancel"
+        case alertSettings = "LS.Common.Strings.alertSettings"
 
     }
 }

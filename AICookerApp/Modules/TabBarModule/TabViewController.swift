@@ -65,13 +65,13 @@ class TabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UserDefaults.showMain = true
+        let homeVC = AICookingViewController()
+        setupUI(tab: .ai)
+        switchTo(homeVC)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let homeVC = AICookingViewController()
-        setupUI(tab: .ai)
-        switchTo(homeVC)
     }
     
     func switchTo(_ vc: UIViewController) {

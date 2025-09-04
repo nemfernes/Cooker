@@ -53,3 +53,6 @@ and cook something fresh daily";
 "LS.Common.Strings.step" = "Step";
 "LS.Common.Strings.finelyChop" = "Finely chop the onion and fry in sunflower oil. Chop the carrots and add to the onion...";
 "LS.Common.Strings.addStep" = "Add a step";
+"LS.Common.Strings.alert" = "No access";
+"LS.Common.Strings.alertCancel" = "Cancel";
+"LS.Common.Strings.alertSettings" = "Settings";

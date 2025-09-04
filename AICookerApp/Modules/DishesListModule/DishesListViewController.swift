@@ -77,7 +77,7 @@ class DishesListViewController: UIViewController {
     }
     
     @objc private func addTapped(_ sender: UIButton) {
-       
+        router?.goToDish(dish: nil)
     }
     
     @objc private func backTapped(_ sender: UIButton) {

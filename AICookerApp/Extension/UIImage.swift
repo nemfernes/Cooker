@@ -50,6 +50,8 @@ extension UIImage {
         case termsIcon
         case arrowBackIcon
         case defaultFoodImage
+        case deleteButtonIcon
+        case deleteIcon
     }
     
     static func asset(_ name: Asset) -> UIImage {
