@@ -10,8 +10,8 @@ import UIKit
 
 struct DishCreateEditModuleBuilder {
     
-    static func build(dish: Dish?) -> DishCreateEditViewController {
-        let vc = DishCreateEditViewController(dish: dish)
+    static func build(dishType: DishType, dish: Dish?) -> DishCreateEditViewController {
+        let vc = DishCreateEditViewController(dishType: dishType, dish: dish)
         let router = DishCreateEditRouter(viewController: vc)
         vc.router = router
         return vc

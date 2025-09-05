@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import RealmSwift
 
-enum DishType {
+enum DishType: String {
     case soups
     case salads
     case desserts
@@ -15,6 +16,25 @@ enum DishType {
     case mainCourses
     case drinks
     case appetizer
+    
+    var title: String {
+            switch self {
+            case .soups:
+                return LS.Common.Strings.soups.localized
+            case .salads:
+                return LS.Common.Strings.salads.localized
+            case .desserts:
+                return LS.Common.Strings.desserts.localized
+            case .breakfasts:
+                return LS.Common.Strings.breakfasts.localized
+            case .mainCourses:
+                return LS.Common.Strings.mainCourses.localized
+            case .drinks:
+                return LS.Common.Strings.drinks.localized
+            case .appetizer:
+                return LS.Common.Strings.appetizers.localized
+            }
+        }
 }
 
 class DishesViewController: UIViewController {

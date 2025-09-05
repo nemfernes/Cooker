@@ -52,6 +52,7 @@ extension UIImage {
         case defaultFoodImage
         case deleteButtonIcon
         case deleteIcon
+        case searchIcon
     }
     
     static func asset(_ name: Asset) -> UIImage {

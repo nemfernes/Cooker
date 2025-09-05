@@ -71,6 +71,9 @@ public extension LS.Common {
         case alert = "LS.Common.Strings.alert"
         case alertCancel = "LS.Common.Strings.alertCancel"
         case alertSettings = "LS.Common.Strings.alertSettings"
+        case notFound = "LS.Common.Strings.notFound"
+        case perhapsThis = "LS.Common.Strings.perhapsThis"
+        case searchFor = "LS.Common.Strings.searchFor"
 
     }
 }
