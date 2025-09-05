@@ -8,9 +8,21 @@
 import UIKit
 import RealmSwift
 
-
 class DishDetailViewController: UIViewController {
     
+    @IBOutlet weak var subStackView: UIStackView!
+    @IBOutlet weak var stepStackView: UIStackView!
+    @IBOutlet weak var stepTitleLabel: UILabel!
+    @IBOutlet weak var ingredientsLabel: UILabel!
+    @IBOutlet weak var ingridientsTitleLabel: UILabel!
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var image3View: UIImageView!
+    @IBOutlet weak var image2View: UIImageView!
+    @IBOutlet weak var image1View: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel! {
         didSet {
             titleLabel.text = LS.Common.Strings.myDishes.localized
@@ -19,14 +31,9 @@ class DishDetailViewController: UIViewController {
         }
     }
     
-    var router: DishesRouterProtocol?
+    var router: DishDetailRouterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupAction()
-    }
-    
-    func setupAction() {
-       
     }
 }

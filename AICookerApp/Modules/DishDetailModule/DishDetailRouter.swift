@@ -9,7 +9,7 @@ import Foundation
 import MessageUI
 import UIKit
 
-protocolDishDetailRouterProtocol {
+protocol DishDetailRouterProtocol {
     func close()
     func goToDishesList(type: DishType)
 }
