@@ -25,7 +25,7 @@ final class AICookingRouter: AICookingRouterProtocol {
     }
   
     func goToDish(dish: Dish) {
-        let nextVC = DishDetailModuleBuilder.build(dish: dish)
+        let nextVC = DishAIDetailModuleBuilder.build(dish: dish)
         nextVC.modalPresentationStyle = .fullScreen
         viewController?.present(nextVC, animated: true)
        

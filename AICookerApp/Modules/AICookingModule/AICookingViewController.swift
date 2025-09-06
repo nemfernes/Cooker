@@ -150,7 +150,7 @@ class AICookingViewController: BaseViewController {
     }
     
     @objc private func addTapped(_ sender: UIButton) {
-        if !UserDefaults.premium && loadDishes() <= 5 {
+        if !UserDefaults.premium && loadDishes() > 5 {
             self.router?.goToPremium()
         } else {
             getDish()

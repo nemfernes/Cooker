@@ -321,10 +321,11 @@ class DishCreateEditViewController: BaseViewController {
         return isValid
     }
 
-    
     @objc private func addTapped(_ sender: UIButton) {
-        let emptyStep = StepRealm()
-        currentDish.steps.append(emptyStep)
+        let newStep = StepRealm()
+        DatabaseManager.shared.update(currentDish) {
+            currentDish.steps.append(newStep)
+        }
         self.reloadTable()
     }
     

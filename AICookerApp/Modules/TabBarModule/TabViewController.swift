@@ -65,7 +65,7 @@ class TabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UserDefaults.showMain = true
-        let homeVC = AICookingViewController()
+        let homeVC = AICookingModuleBuilder.build()
         setupUI(tab: .ai)
         switchTo(homeVC)
     }

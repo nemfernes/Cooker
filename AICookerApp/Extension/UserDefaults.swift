@@ -9,7 +9,6 @@ import Foundation
 
 extension UserDefaults {
     private static let adaptyUserIdKey = "adapty_user_id"
-
     static var adaptyUserId: String {
         if let id = standard.string(forKey: adaptyUserIdKey) {
             return id
@@ -22,22 +21,23 @@ extension UserDefaults {
     
     public static var premium: Bool {
         get {
-            UserDefaults.standard.bool(forKey: "premiumKey")
+            (UserDefaults.standard.object(forKey: "premiumKey") as? Bool) ?? false
         }
         set {
-            guard UserDefaults.standard.bool(forKey: "premiumKey") != newValue else { return }
+            let old = (UserDefaults.standard.object(forKey: "premiumKey") as? Bool) ?? false
+            guard old != newValue else { return }
             UserDefaults.standard.set(newValue, forKey: "premiumKey")
-            UserDefaults.standard.synchronize()
         }
     }
+
     
     public static var showMain: Bool {
         get {
-            UserDefaults.standard.bool(forKey: "premiumKey")
+            UserDefaults.standard.bool(forKey: "showMain")
         }
         set {
-            guard UserDefaults.standard.bool(forKey: "premiumKey") != newValue else { return }
-            UserDefaults.standard.set(newValue, forKey: "premiumKey")
+            guard UserDefaults.standard.bool(forKey: "showMain") != newValue else { return }
+            UserDefaults.standard.set(newValue, forKey: "showMain")
             UserDefaults.standard.synchronize()
         }
     }

@@ -94,6 +94,10 @@
 		0AB4DE1F2E6C3B8700723C81 /* DishResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DE1E2E6C3B8700723C81 /* DishResponse.swift */; };
 		0AB4DE212E6C3BB000723C81 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DE202E6C3BB000723C81 /* APIManager.swift */; };
 		0AB4DE242E6C430700723C81 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0AB4DE232E6C430700723C81 /* Kingfisher */; };
+		0AB4DE312E6C7CD400723C81 /* DishAIDetailModulerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DE2B2E6C7CD400723C81 /* DishAIDetailModulerBuilder.swift */; };
+		0AB4DE332E6C7CD400723C81 /* DishAIDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DE2C2E6C7CD400723C81 /* DishAIDetailRouter.swift */; };
+		0AB4DE342E6C7CD400723C81 /* DishAIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DE2D2E6C7CD400723C81 /* DishAIDetailViewController.swift */; };
+		0AB4DE372E6C7CD400723C81 /* DishAIDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4DE2E2E6C7CD400723C81 /* DishAIDetailViewController.xib */; };
 		0AC8499E2E65BB140058825B /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC849912E65BB140058825B /* OnboardingViewController.xib */; };
 		0AC8499F2E65BB140058825B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC849942E65BB140058825B /* Assets.xcassets */; };
 		0AC849A12E65BB140058825B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC849972E65BB140058825B /* LaunchScreen.storyboard */; };
@@ -282,6 +286,10 @@
 		0AB4DE192E6C278100723C81 /* StepDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepDetailTableViewCell.xib; sourceTree = "<group>"; };
 		0AB4DE1E2E6C3B8700723C81 /* DishResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishResponse.swift; sourceTree = "<group>"; };
 		0AB4DE202E6C3BB000723C81 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		0AB4DE2B2E6C7CD400723C81 /* DishAIDetailModulerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishAIDetailModulerBuilder.swift; sourceTree = "<group>"; };
+		0AB4DE2C2E6C7CD400723C81 /* DishAIDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishAIDetailRouter.swift; sourceTree = "<group>"; };
+		0AB4DE2D2E6C7CD400723C81 /* DishAIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishAIDetailViewController.swift; sourceTree = "<group>"; };
+		0AB4DE2E2E6C7CD400723C81 /* DishAIDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishAIDetailViewController.xib; sourceTree = "<group>"; };
 		0AC849692E65BA020058825B /* AICookerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AICookerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC8498E2E65BB140058825B /* OnboardingModulerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModulerBuilder.swift; sourceTree = "<group>"; };
 		0AC8498F2E65BB140058825B /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
@@ -381,6 +389,7 @@
 		0A4DC4202E65BDCA003C948E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0AB4DE2F2E6C7CD400723C81 /* DishAIDetailModule */,
 				0AD583CF2E6B3C7100AE6BA5 /* DishDetailModule */,
 				0A0E977E2E69BE880053D4FF /* DishCreateEditModule */,
 				0AB0E3912E68A22B0016B978 /* DishesListModule */,
@@ -585,6 +594,17 @@
 				0AB4DE202E6C3BB000723C81 /* APIManager.swift */,
 			);
 			path = APIManager;
+			sourceTree = "<group>";
+		};
+		0AB4DE2F2E6C7CD400723C81 /* DishAIDetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				0AB4DE2B2E6C7CD400723C81 /* DishAIDetailModulerBuilder.swift */,
+				0AB4DE2C2E6C7CD400723C81 /* DishAIDetailRouter.swift */,
+				0AB4DE2D2E6C7CD400723C81 /* DishAIDetailViewController.swift */,
+				0AB4DE2E2E6C7CD400723C81 /* DishAIDetailViewController.xib */,
+			);
+			path = DishAIDetailModule;
 			sourceTree = "<group>";
 		};
 		0AC849602E65BA020058825B = {
@@ -804,6 +824,7 @@
 				0A4DC4D02E664A9F003C948E /* AICookingViewController.xib in Resources */,
 				0AB0E37F2E686CAF0016B978 /* SettingView.xib in Resources */,
 				0A4DC4962E65CA20003C948E /* Poppins-SemiBoldItalic.ttf in Resources */,
+				0AB4DE372E6C7CD400723C81 /* DishAIDetailViewController.xib in Resources */,
 				0A4DC4972E65CA20003C948E /* Poppins-MediumItalic.ttf in Resources */,
 				0A4DC4982E65CA20003C948E /* Poppins-LightItalic.ttf in Resources */,
 				0A4DC4AA2E662708003C948E /* SubConfig.storekit in Resources */,
@@ -855,6 +876,7 @@
 				0A4DC4BB2E662ACB003C948E /* PremiumViewController.swift in Sources */,
 				0A0E97692E68AEE20053D4FF /* DatabaseManager.swift in Sources */,
 				0A4DC41E2E65BD60003C948E /* SubscriptionService.swift in Sources */,
+				0AB4DE332E6C7CD400723C81 /* DishAIDetailRouter.swift in Sources */,
 				0AC849AB2E65BB250058825B /* UIImage.swift in Sources */,
 				0A4DC4DF2E665143003C948E /* TabViewController.swift in Sources */,
 				0A4DC4B32E6629FA003C948E /* AdaptyService.swift in Sources */,
@@ -871,6 +893,7 @@
 				0A6206F52E6A2AF7006D91A7 /* DishTableViewCell.swift in Sources */,
 				0A4DC49E2E65CB06003C948E /* UIFont.swift in Sources */,
 				0AB4DE212E6C3BB000723C81 /* APIManager.swift in Sources */,
+				0AB4DE312E6C7CD400723C81 /* DishAIDetailModulerBuilder.swift in Sources */,
 				0AD583D22E6B3C7100AE6BA5 /* DishDetailModulerBuilder.swift in Sources */,
 				0A4DC41C2E65BD46003C948E /* UserDefaults.swift in Sources */,
 				0AD583D12E6B3C7100AE6BA5 /* StepView.swift in Sources */,
@@ -880,6 +903,7 @@
 				0AB0E3952E68A22B0016B978 /* DishesListModulerBuilder.swift in Sources */,
 				0AB0E3962E68A22B0016B978 /* DishesListViewController.swift in Sources */,
 				0AB0E3972E68A22B0016B978 /* DishesListRouter.swift in Sources */,
+				0AB4DE342E6C7CD400723C81 /* DishAIDetailViewController.swift in Sources */,
 				0A4DC4D62E664ADE003C948E /* DishesViewController.swift in Sources */,
 				0AC849A72E65BB140058825B /* RootRouter.swift in Sources */,
 				0AC849A82E65BB140058825B /* SceneDelegate.swift in Sources */,

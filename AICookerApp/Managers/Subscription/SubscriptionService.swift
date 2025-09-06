@@ -113,7 +113,7 @@ public class SubscriptionService: NSObject {
                         productId: sub,
                         inReceipt: receipt) {
                     case .purchased(_, _):
-                        self.changePremium(state: true)
+                     //   self.changePremium(state: true)
                         return
                     case .expired(_, _):
                         canceled = true
@@ -127,7 +127,7 @@ public class SubscriptionService: NSObject {
             }
 
             if canceled == true {
-                self.changePremium(state: false)
+             //   self.changePremium(state: false)
             }
         }
     }

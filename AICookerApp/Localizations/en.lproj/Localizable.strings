@@ -64,3 +64,4 @@ and cook something fresh daily";
 "LS.Common.Strings.dataWill" = "The data will be permanently deleted";
 "LS.Common.Strings.delete" = "Delete";
 "LS.Common.Strings.detail" = "Details";
+"LS.Common.Strings.addToDishes" = "Add to my dishes";

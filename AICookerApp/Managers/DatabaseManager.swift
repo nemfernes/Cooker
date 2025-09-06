@@ -58,12 +58,11 @@ final class DatabaseManager {
     // MARK: - Update
     
     func update<T: Object>(_ object: T, with updates: () -> Void) {
-        do {
-            try realm.write {
-                updates()
-            }
-        } catch {
-            print("❌ Error updating object: \(error)")
+        if let r = object.realm {
+            do { try r.write { updates() } }
+            catch { print("❌ Error updating object: \(error)") }
+        } else {
+            updates()
         }
     }
     

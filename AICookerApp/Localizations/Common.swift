@@ -79,6 +79,7 @@ public extension LS.Common {
         case dataWill = "LS.Common.Strings.dataWill"
         case delete = "LS.Common.Strings.delete"
         case detail = "LS.Common.Strings.detail"
+        case addToDishes = "LS.Common.Strings.addToDishes"
     }
 }
 
