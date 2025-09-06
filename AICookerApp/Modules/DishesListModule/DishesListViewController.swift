@@ -8,9 +8,15 @@
 import UIKit
 import RealmSwift
 
-class DishesListViewController: UIViewController, UITextFieldDelegate {
+class DishesListViewController: BaseViewController, UITextFieldDelegate {
     
     
+    @IBOutlet weak var addNavButton: UIButton!   {
+        didSet {
+            addNavButton.setImage(.addIcon, for: .normal)
+            addNavButton.addTarget(self, action: #selector(addTapped), for: .touchUpInside)
+        }
+    }
     @IBOutlet weak var searchTextField: UITextField! {
         didSet {
             searchTextField.attributedPlaceholder = NSAttributedString(
@@ -132,6 +138,13 @@ class DishesListViewController: UIViewController, UITextFieldDelegate {
     private func setupInitUI() {
         self.titleLabel.text = dishType.title
         updateNoResultsView()
+        if allDishes?.count != 0 {
+            addNavButton.isHidden = false
+            addButton.isHidden = true
+        } else {
+            addNavButton.isHidden = true
+            addButton.isHidden = false
+        }
     }
         
     private func updateNoResultsView() {
@@ -174,9 +187,14 @@ class DishesListViewController: UIViewController, UITextFieldDelegate {
     private func loadDishes() {
         allDishes = DatabaseManager.shared
             .getAll(Dish.self)
-            .filter("type == %@", dishType.rawValue)
+            .filter("type == %@ AND isAIGenerated == false", dishType.rawValue)
         dishes = allDishes
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+          textField.resignFirstResponder()
+          return true
+      }
     
     @objc private func searchTextChanged(_ textField: UITextField) {
         let query = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
@@ -192,7 +210,7 @@ class DishesListViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc private func addTapped(_ sender: UIButton) {
-        router?.goToDish(dishType: self.dishType, dish: nil)
+        router?.goToEditCreate(dishType: self.dishType, dish: nil)
     }
     
     @objc private func backTapped(_ sender: UIButton) {
@@ -224,6 +242,6 @@ extension DishesListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let dish = dishes?[indexPath.row] else { return }
-        //router?.goToDish(dish: dish)
+        router?.goToDish(dish: dish)
     }
 }

@@ -1,10 +1,11 @@
 import UIKit
 
 
-class StepView: NibView {
+class StepView: UIView {
     
     @IBOutlet weak var titleImageView: UIImageView! {
         didSet {
+            titleImageView.layer.cornerRadius = 16
             titleImageView.contentMode = .scaleAspectFill
         }
     }
@@ -16,21 +17,22 @@ class StepView: NibView {
         }
     }
     
-    @IBOutlet weak var button: UIButton! {
-        didSet {
-            button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    
+    func setup(step: StepRealm, idx: Int) {
+        titleLabel.text = step.text
+        descriptionLabel.text = "\(LS.Common.Strings.step.localized) \(idx + 1)"
+        if let image =  step.image {
+            titleImageView.isHidden = false
+            titleImageView.image = image
+        } else {
+            titleImageView.isHidden = true
         }
     }
     
-    var pressAction: (() -> Void)?
-    
-    func setup(title: String, image: UIImage) {
-        self.backgroundColor = .white
-        titleImageView.image = image
-        titleLabel.text = title
-    }
-    
-    @objc private func buttonTapped(_ sender: UIButton) {
-        pressAction?()
-    }
+    func loadFromNib() -> StepView {
+           let nib = UINib(nibName: "StepView", bundle: nil)
+           return nib.instantiate(withOwner: nil, options: nil).first as! StepView
+       }
 }

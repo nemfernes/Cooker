@@ -10,8 +10,8 @@ import UIKit
 
 struct DishDetailModuleBuilder {
     
-    static func build() -> DishDetailViewController {
-        let vc = DishDetailViewController()
+    static func build(dish: Dish) -> DishDetailViewController {
+        let vc = DishDetailViewController(dish: dish)
         let router = DishDetailRouter(viewController: vc)
         vc.router = router
         return vc

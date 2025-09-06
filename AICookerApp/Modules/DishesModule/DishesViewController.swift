@@ -35,6 +35,25 @@ enum DishType: String {
                 return LS.Common.Strings.appetizers.localized
             }
         }
+    
+    var request: String {
+        switch self {
+        case .soups:
+            return "Soups"
+        case .salads:
+            return "Salads"
+        case .desserts:
+            return "Desserts"
+        case .breakfasts:
+            return "Breakfasts"
+        case .mainCourses:
+            return "Main Courses"
+        case .drinks:
+            return "Drinks"
+        case .appetizer:
+            return "Appetizers"
+        }
+    }
 }
 
 class DishesViewController: UIViewController {

@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import RealmSwift
 
-class AICookingViewController: UIViewController {
+class AICookingViewController: BaseViewController {
     
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
+    @IBOutlet weak var noResultView: UIView!
+    @IBOutlet weak var dishTableView: UITableView!
     @IBOutlet weak var defaultImageView: UIImageView! {
         didSet {
             defaultImageView.image = .asset(.defaultFoodImage)
@@ -49,21 +52,32 @@ class AICookingViewController: UIViewController {
             addButton.setTitleColor(.white, for: .normal)
             addButton.titleLabel?.font = .sfSemiBold16
             addButton.backgroundColor = UIColor.asset(.color_1E1E1E)
-            addButton.layer.cornerRadius = 28
+            addButton.layer.cornerRadius = 25
             addButton.addTarget(self, action: #selector(addTapped), for: .touchUpInside)
         }
     }
     
     var router: AICookingRouterProtocol?
     let categoryData = CategoryData.data
-    let selectedCategory: DishType = .mainCourses
+    private var dishes: Results<Dish>?
+    var selectedCategory: DishType = .mainCourses {
+        didSet {
+            reloadView()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupTableView()
         setupCollectionView()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadView()
+    }
+    
     
     func setupCollectionView() {
         guard let flowLayout = categoryCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
@@ -92,11 +106,83 @@ class AICookingViewController: UIViewController {
            }
     }
     
-    @objc private func addTapped(_ sender: UIButton) {
+    private func reloadView() {
+        loadDishesFromCategory()
+        updateNoResultsView()
+        dishTableView.reloadData()
+    }
+    
+    private func updateNoResultsView() {
+        let hasDishes = !(dishes?.isEmpty ?? true)
         
+        if !hasDishes {
+            noResultView.isHidden = false
+            dishTableView.isHidden = true
+            return
+        }
+        
+        dishTableView.isHidden = false
+        noResultView.isHidden = true
+    }
+    
+    private func setupTableView() {
+        dishTableView.dataSource = self
+        dishTableView.delegate = self
+        dishTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
+        dishTableView.rowHeight = UITableView.automaticDimension
+        dishTableView.estimatedRowHeight = 120
+        dishTableView.register(
+               UINib(nibName: "DishTableViewCell", bundle: nil),
+               forCellReuseIdentifier: DishTableViewCell.reuseId
+           )
+       }
+    
+    private func loadDishesFromCategory() {
+        dishes = DatabaseManager.shared
+               .getAll(Dish.self)
+               .filter("type == %@ AND isAIGenerated == true", selectedCategory.request)
+    }
+    
+    private func loadDishes()-> Int {
+        dishes = DatabaseManager.shared
+            .getAll(Dish.self)
+        return dishes?.count ?? 0
+    }
+    
+    @objc private func addTapped(_ sender: UIButton) {
+        if !UserDefaults.premium && loadDishes() <= 5 {
+            self.router?.goToPremium()
+        } else {
+            getDish()
+        }
+    }
+    
+   private func getDish() {
+       let category = selectedCategory.request
+       let locale = Locale.current.language.languageCode?.identifier ?? "en"
+       let userId = UserDefaults.adaptyUserId
+       self.addLoadingView()
+       APIManager.shared.generateReceipt(category: category,
+                                                locale: locale,
+                                                userId: userId) { result in
+           DispatchQueue.main.async {
+               switch result {
+               case .success(let receipt):
+                   let dish = Dish(from: receipt) {
+                       self.dishTableView.reloadData()
+                       }
+                   DatabaseManager.shared.add(dish)
+                   self.reloadView()
+                   self.removeLoadingView()
+               case .failure(let error):
+                   self.removeLoadingView()
+                   self.router?.showErrorAlert()
+                   print("\(error.localizedDescription)")
+               }
+           }
+       }
     }
 }
-
 
 extension AICookingViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -111,7 +197,33 @@ extension AICookingViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedCategory = categoryData[indexPath.row]
-        print("Выбрана категория: \(selectedCategory.name)")
+        self.selectedCategory = categoryData[indexPath.row].category
+    }
+}
+
+extension AICookingViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let count = dishes?.count ?? 0
+        return count
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let dish = dishes?[indexPath.row],
+              let cell = tableView.dequeueReusableCell(
+                withIdentifier: DishTableViewCell.reuseId,
+                for: indexPath
+              ) as? DishTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        cell.setupUI(dish: dish)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let dish = dishes?[indexPath.row] else { return }
+        router?.goToDish(dish: dish)
     }
 }

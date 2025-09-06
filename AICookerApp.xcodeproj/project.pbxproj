@@ -89,6 +89,11 @@
 		0AB0E3962E68A22B0016B978 /* DishesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0E38F2E68A22B0016B978 /* DishesListViewController.swift */; };
 		0AB0E3972E68A22B0016B978 /* DishesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0E38E2E68A22B0016B978 /* DishesListRouter.swift */; };
 		0AB4DE152E6B470C00723C81 /* DishDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4DE142E6B470C00723C81 /* DishDetailViewController.xib */; };
+		0AB4DE1B2E6C278100723C81 /* StepDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4DE192E6C278100723C81 /* StepDetailTableViewCell.xib */; };
+		0AB4DE1C2E6C278100723C81 /* StepDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DE182E6C278100723C81 /* StepDetailTableViewCell.swift */; };
+		0AB4DE1F2E6C3B8700723C81 /* DishResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DE1E2E6C3B8700723C81 /* DishResponse.swift */; };
+		0AB4DE212E6C3BB000723C81 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DE202E6C3BB000723C81 /* APIManager.swift */; };
+		0AB4DE242E6C430700723C81 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0AB4DE232E6C430700723C81 /* Kingfisher */; };
 		0AC8499E2E65BB140058825B /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC849912E65BB140058825B /* OnboardingViewController.xib */; };
 		0AC8499F2E65BB140058825B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC849942E65BB140058825B /* Assets.xcassets */; };
 		0AC849A12E65BB140058825B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC849972E65BB140058825B /* LaunchScreen.storyboard */; };
@@ -273,6 +278,10 @@
 		0AB0E38F2E68A22B0016B978 /* DishesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesListViewController.swift; sourceTree = "<group>"; };
 		0AB0E3902E68A22B0016B978 /* DishesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishesListViewController.xib; sourceTree = "<group>"; };
 		0AB4DE142E6B470C00723C81 /* DishDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishDetailViewController.xib; sourceTree = "<group>"; };
+		0AB4DE182E6C278100723C81 /* StepDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDetailTableViewCell.swift; sourceTree = "<group>"; };
+		0AB4DE192E6C278100723C81 /* StepDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepDetailTableViewCell.xib; sourceTree = "<group>"; };
+		0AB4DE1E2E6C3B8700723C81 /* DishResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishResponse.swift; sourceTree = "<group>"; };
+		0AB4DE202E6C3BB000723C81 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		0AC849692E65BA020058825B /* AICookerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AICookerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC8498E2E65BB140058825B /* OnboardingModulerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModulerBuilder.swift; sourceTree = "<group>"; };
 		0AC8498F2E65BB140058825B /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
@@ -298,6 +307,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB4DE242E6C430700723C81 /* Kingfisher in Frameworks */,
 				0A0E976F2E68EFED0053D4FF /* RealmSwift in Frameworks */,
 				0A4DC4AD2E6628CA003C948E /* SwiftyStoreKit in Frameworks */,
 				0A4DC4182E65BD2A003C948E /* Adapty in Frameworks */,
@@ -359,6 +369,7 @@
 		0A4DC41F2E65BDA2003C948E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				0AB4DE1D2E6C3B7700723C81 /* APIManager */,
 				0A4DC4AE2E6628E9003C948E /* Subscription */,
 				0AC8499A2E65BB140058825B /* RootRouter.swift */,
 				0A4DC4B22E6629FA003C948E /* AdaptyService.swift */,
@@ -558,6 +569,24 @@
 			path = DishesListModule;
 			sourceTree = "<group>";
 		};
+		0AB4DE1A2E6C278100723C81 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0AB4DE182E6C278100723C81 /* StepDetailTableViewCell.swift */,
+				0AB4DE192E6C278100723C81 /* StepDetailTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0AB4DE1D2E6C3B7700723C81 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				0AB4DE1E2E6C3B8700723C81 /* DishResponse.swift */,
+				0AB4DE202E6C3BB000723C81 /* APIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
 		0AC849602E65BA020058825B = {
 			isa = PBXGroup;
 			children = (
@@ -633,6 +662,7 @@
 		0AD583CF2E6B3C7100AE6BA5 /* DishDetailModule */ = {
 			isa = PBXGroup;
 			children = (
+				0AB4DE1A2E6C278100723C81 /* Cell */,
 				0AD583CA2E6B3C7100AE6BA5 /* View */,
 				0AD583CB2E6B3C7100AE6BA5 /* DishDetailModulerBuilder.swift */,
 				0AD583CC2E6B3C7100AE6BA5 /* DishDetailRouter.swift */,
@@ -664,6 +694,7 @@
 				0A4DC4192E65BD2A003C948E /* AdaptyUI */,
 				0A4DC4AC2E6628CA003C948E /* SwiftyStoreKit */,
 				0A0E976E2E68EFED0053D4FF /* RealmSwift */,
+				0AB4DE232E6C430700723C81 /* Kingfisher */,
 			);
 			productName = AICookerApp;
 			productReference = 0AC849692E65BA020058825B /* AICookerApp.app */;
@@ -734,6 +765,7 @@
 				0A4DC4162E65BD2A003C948E /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */,
 				0A4DC4AB2E6628CA003C948E /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
 				0A0E97632E68AED10053D4FF /* XCRemoteSwiftPackageReference "realm-swift" */,
+				0AB4DE222E6C430700723C81 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0AC8496A2E65BA020058825B /* Products */;
@@ -780,6 +812,7 @@
 				0A4DC49A2E65CA20003C948E /* Poppins-Black.ttf in Resources */,
 				0A4DC49B2E65CA20003C948E /* Poppins-Bold.ttf in Resources */,
 				0AB0E3922E68A22B0016B978 /* DishesListViewController.xib in Resources */,
+				0AB4DE1B2E6C278100723C81 /* StepDetailTableViewCell.xib in Resources */,
 				0A4DC4DA2E664B11003C948E /* SettingsViewController.xib in Resources */,
 				0A4DC49C2E65CA20003C948E /* Poppins-Regular.ttf in Resources */,
 				0AB4DE152E6B470C00723C81 /* DishDetailViewController.xib in Resources */,
@@ -803,6 +836,7 @@
 				0A4DC4722E65BFE7003C948E /* Localizable.swift in Sources */,
 				0A0E97862E69C35F0053D4FF /* StepTableViewCell.swift in Sources */,
 				0A0E978A2E69CB0F0053D4FF /* Dish.swift in Sources */,
+				0AB4DE1C2E6C278100723C81 /* StepDetailTableViewCell.swift in Sources */,
 				0A0E976C2E68EDBE0053D4FF /* AICookingModulerBuilder.swift in Sources */,
 				0A0E976D2E68EDBE0053D4FF /* AICookingRouter.swift in Sources */,
 				0AC849A32E65BB140058825B /* OnboardingModulerBuilder.swift in Sources */,
@@ -827,6 +861,7 @@
 				0A0E977F2E69BE880053D4FF /* DishCreateEditModulerBuilder.swift in Sources */,
 				0A4DC4A82E661D64003C948E /* OnboardingModel.swift in Sources */,
 				0A4DC4742E65C015003C948E /* Common.swift in Sources */,
+				0AB4DE1F2E6C3B8700723C81 /* DishResponse.swift in Sources */,
 				0A4DC4BE2E663397003C948E /* String.swift in Sources */,
 				0AC849A42E65BB140058825B /* OnboardingRouter.swift in Sources */,
 				0A0E97792E68F1EA0053D4FF /* CategoryModel.swift in Sources */,
@@ -835,6 +870,7 @@
 				0AC849A62E65BB140058825B /* AppDelegate.swift in Sources */,
 				0A6206F52E6A2AF7006D91A7 /* DishTableViewCell.swift in Sources */,
 				0A4DC49E2E65CB06003C948E /* UIFont.swift in Sources */,
+				0AB4DE212E6C3BB000723C81 /* APIManager.swift in Sources */,
 				0AD583D22E6B3C7100AE6BA5 /* DishDetailModulerBuilder.swift in Sources */,
 				0A4DC41C2E65BD46003C948E /* UserDefaults.swift in Sources */,
 				0AD583D12E6B3C7100AE6BA5 /* StepView.swift in Sources */,
@@ -1176,6 +1212,14 @@
 				minimumVersion = 0.16.4;
 			};
 		};
+		0AB4DE222E6C430700723C81 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1198,6 +1242,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0A4DC4AB2E6628CA003C948E /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
 			productName = SwiftyStoreKit;
+		};
+		0AB4DE232E6C430700723C81 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0AB4DE222E6C430700723C81 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -74,7 +74,11 @@ public extension LS.Common {
         case notFound = "LS.Common.Strings.notFound"
         case perhapsThis = "LS.Common.Strings.perhapsThis"
         case searchFor = "LS.Common.Strings.searchFor"
-
+        case editRecept = "LS.Common.Strings.editRecept"
+        case deleteRecipe = "LS.Common.Strings.deleteRecipe"
+        case dataWill = "LS.Common.Strings.dataWill"
+        case delete = "LS.Common.Strings.delete"
+        case detail = "LS.Common.Strings.detail"
     }
 }
 

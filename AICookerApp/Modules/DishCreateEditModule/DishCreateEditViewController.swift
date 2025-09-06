@@ -14,7 +14,7 @@ struct Step {
     var image: UIImage?
 }
 
-class DishCreateEditViewController: UIViewController {
+class DishCreateEditViewController: BaseViewController {
     
     
     @IBOutlet weak var photoButtonsView: UIView!
@@ -176,6 +176,8 @@ class DishCreateEditViewController: UIViewController {
     @IBOutlet weak var tableViewHeightConstr: NSLayoutConstraint!
     var router: DishCreateEditRouterProtocol?
     
+    var onClose: ((_ dish: Dish) -> Void)?
+    
     private let placeholderText = LS.Common.Strings.pumpkin500.localized
     private let namePlaceholder = LS.Common.Strings.pumpkinSoup.localized
     private var currentDish: Dish
@@ -227,11 +229,13 @@ class DishCreateEditViewController: UIViewController {
     
     private func setupUI() {
         updatePhotoViews()
+        self.titleLabel.text = isEditingExisting ? LS.Common.Strings.editRecept.localized : LS.Common.Strings.createRecept.localized
         
         if currentDish.ingredients.isEmpty {
             ingredientsTextView.text = placeholderText
             ingredientsTextView.textColor = .color82828E
         } else {
+            nameTextField.text = currentDish.name
             ingredientsTextView.text = currentDish.ingredients
             ingredientsTextView.textColor = .color18181C
         }
@@ -326,14 +330,21 @@ class DishCreateEditViewController: UIViewController {
     
     @objc private func saveTapped(_ sender: UIButton) {
         guard validateAndMark() else { return }
-        currentDish.name = nameTextField.text ?? ""
-        currentDish.ingredients = ingredientsTextView.text ?? ""
         
+        let name = nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let ingredients = ingredientsTextView.text.trimmingCharacters(in: .whitespacesAndNewlines)
+
         if isEditingExisting {
-            DatabaseManager.shared.update(currentDish) {}
+            DatabaseManager.shared.update(currentDish) {
+                currentDish.name = name
+                currentDish.ingredients = ingredients
+            }
         } else {
+            currentDish.name = name
+            currentDish.ingredients = ingredients
             DatabaseManager.shared.add(currentDish)
         }
+        onClose?(currentDish)
         router?.close()
     }
     
@@ -542,19 +553,12 @@ extension DishCreateEditViewController: UITextFieldDelegate, UITextViewDelegate 
     }
     
     func textViewDidChange(_ textView: UITextView) {
-        let trimmed = textView.text.trimmingCharacters(in: .whitespacesAndNewlines)
-        DatabaseManager.shared.update(currentDish) {
-            currentDish.ingredients = trimmed
-        }
+        _ = textView.text.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     func textView(_ textView: UITextView,
                   shouldChangeTextIn range: NSRange,
                   replacementText text: String) -> Bool {
-        if text == "\n" {
-            textView.resignFirstResponder()
-            return false
-        }
         return true
     }
     
@@ -574,18 +578,12 @@ extension DishCreateEditViewController: UITextFieldDelegate, UITextViewDelegate 
             } else {
                 textField.textColor = .color18181C
             }
-            DatabaseManager.shared.update(currentDish) {
-                currentDish.name = trimmed
-            }
         }
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if textField == nameTextField {
             let trimmed = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-            DatabaseManager.shared.update(currentDish) {
-                currentDish.name = trimmed
-            }
         }
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

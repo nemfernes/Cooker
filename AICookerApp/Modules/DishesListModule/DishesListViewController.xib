@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DishesListViewController" customModule="AICookerApp" customModuleProvider="target">
             <connections>
                 <outlet property="addButton" destination="aG9-b6-irl" id="ifQ-Xf-4Rl"/>
+                <outlet property="addNavButton" destination="CRD-2Y-XUJ" id="SvJ-vh-J5a"/>
                 <outlet property="backButton" destination="FED-52-Y2y" id="Qzn-Vv-FJc"/>
                 <outlet property="defaultImageView" destination="fxD-ww-2Bg" id="q4z-Qc-QCR"/>
                 <outlet property="defaultView" destination="X7Z-1W-T8c" id="RaX-5F-qvS"/>
@@ -52,9 +53,20 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="arrowBackIcon"/>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRD-2Y-XUJ">
+                                    <rect key="frame" x="353" y="10" width="24" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="CbK-YY-9Xx"/>
+                                        <constraint firstAttribute="width" constant="24" id="qQu-QL-4LZ"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="arrowBackIcon"/>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="CRD-2Y-XUJ" firstAttribute="centerY" secondItem="sHx-gK-un3" secondAttribute="centerY" id="3J1-EQ-yv8"/>
+                                <constraint firstAttribute="trailing" secondItem="CRD-2Y-XUJ" secondAttribute="trailing" constant="16" id="3Oi-A0-Qsm"/>
                                 <constraint firstAttribute="bottom" secondItem="FED-52-Y2y" secondAttribute="bottom" constant="16" id="JAK-4c-nnJ"/>
                                 <constraint firstItem="sHx-gK-un3" firstAttribute="centerX" secondItem="Vaz-S9-hy7" secondAttribute="centerX" id="f94-Wj-kzg"/>
                                 <constraint firstItem="FED-52-Y2y" firstAttribute="centerY" secondItem="sHx-gK-un3" secondAttribute="centerY" id="hP2-qL-cri"/>
@@ -144,7 +156,7 @@
                         <constraint firstAttribute="trailing" secondItem="iED-LN-uN5" secondAttribute="trailing" id="udO-Op-ap0"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tUg-xJ-ydh">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tUg-xJ-ydh">
                     <rect key="frame" x="16" y="619" width="361" height="233"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>

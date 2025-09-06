@@ -92,7 +92,7 @@ class TabViewController: UIViewController {
     
     @objc private func aiReceiptButtonTapped(_ sender: UIButton) {
         setupUI(tab: .ai)
-        let homeVC = AICookingViewController()
+        let homeVC = AICookingModuleBuilder.build()
         switchTo(homeVC)
     }
     

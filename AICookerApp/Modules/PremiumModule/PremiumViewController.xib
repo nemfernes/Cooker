@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PremiumViewController" customModule="AICookerApp" customModuleProvider="target">
             <connections>
                 <outlet property="bottomContainerView" destination="bTo-sU-E4O" id="FTU-xl-9wb"/>
+                <outlet property="closeButton" destination="EiA-JS-ttC" id="kod-Ef-87u"/>
                 <outlet property="continueButton" destination="yjk-Ci-xcK" id="edX-cP-RBr"/>
                 <outlet property="monthButton" destination="AcZ-yj-EKM" id="H06-Ko-jrc"/>
                 <outlet property="monthCheckboxImageView" destination="hMR-ob-43h" id="ED1-Wf-0Ai"/>
@@ -234,6 +235,15 @@
                         <constraint firstAttribute="height" constant="68" id="uuA-Sf-mM3"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiA-JS-ttC">
+                    <rect key="frame" x="16" y="69" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="6bx-bB-I49"/>
+                        <constraint firstAttribute="width" constant="24" id="bcB-qS-uXr"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="arrowBackIcon"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="color_F4F5FA"/>
@@ -243,8 +253,10 @@
                 <constraint firstItem="VuR-Dk-Vlb" firstAttribute="top" secondItem="JYn-Jx-Psi" secondAttribute="bottom" constant="16" id="4tb-1P-JZd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bTo-sU-E4O" secondAttribute="trailing" id="CH0-ba-K6J"/>
                 <constraint firstItem="EXo-Ms-Abi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Dk2-mj-j1d"/>
+                <constraint firstItem="EiA-JS-ttC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="H1x-c7-Pq7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VuR-Dk-Vlb" secondAttribute="trailing" constant="16" id="JIz-ko-a4u"/>
                 <constraint firstItem="bTo-sU-E4O" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Qfm-qZ-Nqd"/>
+                <constraint firstItem="EiA-JS-ttC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="RzO-5U-Qaz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JYn-Jx-Psi" secondAttribute="trailing" constant="16" id="S0l-Dy-tTJ"/>
                 <constraint firstItem="VuR-Dk-Vlb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="VZS-lv-AKW"/>
                 <constraint firstItem="bTo-sU-E4O" firstAttribute="top" secondItem="VuR-Dk-Vlb" secondAttribute="bottom" constant="24" id="eef-XW-XeC"/>
@@ -261,6 +273,7 @@
         </view>
     </objects>
     <resources>
+        <image name="arrowBackIcon" width="24" height="24"/>
         <namedColor name="color_F4F5FA">
             <color red="0.95686274509803926" green="0.96078431372549022" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

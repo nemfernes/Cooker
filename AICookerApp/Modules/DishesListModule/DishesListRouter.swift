@@ -11,7 +11,8 @@ import UIKit
 
 protocol DishesListRouterProtocol {
     func close()
-    func goToDish(dishType: DishType, dish: Dish?)
+    func goToDish(dish: Dish)
+    func goToEditCreate(dishType: DishType, dish: Dish?)
 }
 
 final class DishesListRouter: NSObject, DishesListRouterProtocol {
@@ -22,8 +23,15 @@ final class DishesListRouter: NSObject, DishesListRouterProtocol {
         self.viewController = viewController
     }
   
-    func goToDish(dishType: DishType, dish: Dish?) {
+    func goToEditCreate(dishType: DishType, dish: Dish?) {
         let nextVC = DishCreateEditModuleBuilder.build(dishType: dishType, dish: dish)
+        nextVC.modalPresentationStyle = .fullScreen
+        viewController?.present(nextVC, animated: true)
+       
+    }
+    
+    func goToDish(dish: Dish) {
+        let nextVC = DishDetailModuleBuilder.build(dish: dish)
         nextVC.modalPresentationStyle = .fullScreen
         viewController?.present(nextVC, animated: true)
        

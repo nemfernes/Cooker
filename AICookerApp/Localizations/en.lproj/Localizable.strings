@@ -59,3 +59,8 @@ and cook something fresh daily";
 "LS.Common.Strings.notFound" = "Recipe not found";
 "LS.Common.Strings.perhapsThis" = "Perhaps this dish has not been added yet or check the name";
 "LS.Common.Strings.searchFor" = "Search for recipes";
+"LS.Common.Strings.editRecept" = "Edit recipe";
+"LS.Common.Strings.deleteRecipe" = "Delete recipe?";
+"LS.Common.Strings.dataWill" = "The data will be permanently deleted";
+"LS.Common.Strings.delete" = "Delete";
+"LS.Common.Strings.detail" = "Details";

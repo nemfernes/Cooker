@@ -27,41 +27,9 @@ open class BaseViewController: UIViewController {
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        premium = UserDefaults.premium
-        premiumDidChange()
+        setupHideKeyboardGesture()
     }
-    
-    @objc private func handleOfflineChange() {
-        offlineDidChange()
-    }
-        
-    open func offlineDidChange() {}
 
-    @objc private func handlePremiumChange() {
-        let newValue = UserDefaults.premium
-        if (premium != newValue) {
-            premium = newValue
-            premiumDidChange()
-        }
-    }
-    @objc private func handleLangChange() {
-        languageDidChange()
-    }
-        
-    open func languageDidChange() {}
-
-    @objc private func handleTranslateTypeChange(notification: Notification) {
-        if let needTranslate = notification.userInfo?["withTranslate"] as? Bool {
-            translateTypeDidChange(needTranslate: needTranslate)
-            return
-        }
-        translateTypeDidChange(needTranslate: false)
-    }
-        
-    open func translateTypeDidChange(needTranslate: Bool) {}
-
-    open func premiumDidChange() {}
-        
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -82,6 +50,16 @@ open class BaseViewController: UIViewController {
     public func isLoading() -> Bool {
         guard loadingView != nil else { return false }
         return loadingView.superview != nil
+    }
+    
+    private func setupHideKeyboardGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    @objc private func hideKeyboard() {
+        view.endEditing(true)
     }
    
     open func addLoadingView(with animation: AnimationEnum = .indicator) {

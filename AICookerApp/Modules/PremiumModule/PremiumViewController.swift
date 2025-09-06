@@ -19,6 +19,12 @@ public enum PremiumButtonType {
 class PremiumViewController: BaseViewController {
     
     
+    @IBOutlet weak var closeButton: UIButton!     {
+        didSet {
+            closeButton.setImage(.closeIcon, for: .normal)
+            closeButton.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
+        }
+    }
     @IBOutlet weak var bottomContainerView: UIView!{
         didSet {
             bottomContainerView.backgroundColor = .white
@@ -202,6 +208,11 @@ class PremiumViewController: BaseViewController {
         router?.openLink("https://doc-hosting.flycricket.io/ai-cooking-receipts-privacy-policy/54064618-5f79-4424-9344-5395a797b576/privacy")
     }
     
+    @objc private func closeTapped(_ sender: UIButton) {
+        self.delegate?.premiumViewControllerDidClose(self)
+        self.router?.close()
+    }
+    
     @objc private func monthTapped(_ sender: UIButton) {
         currentProduct = .month
         setupUI(product: .month)
@@ -293,6 +304,7 @@ class PremiumViewController: BaseViewController {
                 self.delegate?.premiumViewControllerDidClose(self)
                 self.router?.close()
             case .error(_):
+                self.router?.showErrorAlert()
                 break
             }
         })
