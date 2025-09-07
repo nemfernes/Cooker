@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "Τα δεδομένα θα διαγραφούν οριστικά";
 "LS.Common.Strings.delete" = "Διαγραφή";
 "LS.Common.Strings.detail" = "Λεπτομέρειες";
+"LS.Common.Strings.addToDishes" = "Προσθήκη στα πιάτα μου";
+"LS.Common.Strings.errorOccured" = "Παρουσιάστηκε σφάλμα";
+"LS.Common.Strings.successAdded" = "Προστέθηκε με επιτυχία";

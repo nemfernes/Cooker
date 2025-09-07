@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "Tiedot poistetaan pysyvästi";
 "LS.Common.Strings.delete" = "Poista";
 "LS.Common.Strings.detail" = "Tiedot";
+"LS.Common.Strings.addToDishes" = "Lisää omiin ruokiin";
+"LS.Common.Strings.errorOccured" = "Tapahtui virhe";
+"LS.Common.Strings.successAdded" = "Lisätty onnistuneesti";

@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "Dữ liệu sẽ bị xóa vĩnh viễn";
 "LS.Common.Strings.delete" = "Xóa";
 "LS.Common.Strings.detail" = "Chi tiết";
+"LS.Common.Strings.addToDishes" = "Thêm vào món ăn của tôi";
+"LS.Common.Strings.errorOccured" = "Đã xảy ra lỗi";
+"LS.Common.Strings.successAdded" = "Đã thêm thành công";

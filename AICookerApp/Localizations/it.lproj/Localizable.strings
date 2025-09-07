@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "I dati verranno eliminati definitivamente";
 "LS.Common.Strings.delete" = "Elimina";
 "LS.Common.Strings.detail" = "Dettagli";
+"LS.Common.Strings.addToDishes" = "Aggiungi ai miei piatti";
+"LS.Common.Strings.errorOccured" = "Si è verificato un errore";
+"LS.Common.Strings.successAdded" = "Aggiunto con successo";

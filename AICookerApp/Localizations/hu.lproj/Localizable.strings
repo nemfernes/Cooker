@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "Az adatok véglegesen törlődnek";
 "LS.Common.Strings.delete" = "Törlés";
 "LS.Common.Strings.detail" = "Részletek";
+"LS.Common.Strings.addToDishes" = "Hozzáadás az ételeimhez";
+"LS.Common.Strings.errorOccured" = "Hiba történt";
+"LS.Common.Strings.successAdded" = "Sikeresen hozzáadva";

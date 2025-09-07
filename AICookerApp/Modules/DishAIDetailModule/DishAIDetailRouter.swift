@@ -13,6 +13,7 @@ protocol DishAIDetailRouterProtocol {
     func close()
     func share(dish: Dish)
     func showDeleteAlert(confirmHandler: @escaping () -> Void)
+    func showSuccessAlert()
 }
 
 final class DishAIDetailRouter: NSObject, DishAIDetailRouterProtocol {
@@ -61,4 +62,12 @@ final class DishAIDetailRouter: NSObject, DishAIDetailRouterProtocol {
             
             viewController?.present(alert, animated: true)
         }
+    func showSuccessAlert() {
+        let alert = UIAlertController(
+            title: LS.Common.Strings.successAdded.localized, message: nil,
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        viewController?.present(alert, animated: true)
+    }
 }

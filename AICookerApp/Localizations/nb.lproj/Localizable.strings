@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "Dataene vil bli slettet permanent";
 "LS.Common.Strings.delete" = "Slett";
 "LS.Common.Strings.detail" = "Detaljer";
+"LS.Common.Strings.addToDishes" = "Legg til i mine retter";
+"LS.Common.Strings.errorOccured" = "En feil oppstod";
+"LS.Common.Strings.successAdded" = "Vellykket lagt til";

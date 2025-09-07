@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "Data kommer att raderas permanent";
 "LS.Common.Strings.delete" = "Radera";
 "LS.Common.Strings.detail" = "Detaljer";
+"LS.Common.Strings.addToDishes" = "Lägg till i mina rätter";
+"LS.Common.Strings.errorOccured" = "Ett fel inträffade";
+"LS.Common.Strings.successAdded" = "Tillagt framgångsrikt";

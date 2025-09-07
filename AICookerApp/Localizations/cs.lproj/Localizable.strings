@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "Data budou trvale smazána";
 "LS.Common.Strings.delete" = "Smazat";
 "LS.Common.Strings.detail" = "Podrobnosti";
+"LS.Common.Strings.addToDishes" = "Přidat do mých jídel";
+"LS.Common.Strings.errorOccured" = "Došlo k chybě";
+"LS.Common.Strings.successAdded" = "Úspěšně přidáno";

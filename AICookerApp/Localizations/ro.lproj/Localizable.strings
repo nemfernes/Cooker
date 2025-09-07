@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "Datele vor fi șterse definitiv";
 "LS.Common.Strings.delete" = "Șterge";
 "LS.Common.Strings.detail" = "Detalii";
+"LS.Common.Strings.addToDishes" = "Adaugă la mâncărurile mele";
+"LS.Common.Strings.errorOccured" = "A apărut o eroare";
+"LS.Common.Strings.successAdded" = "Adăugat cu succes";

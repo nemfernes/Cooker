@@ -46,7 +46,7 @@ final class PremiumRouter: PremiumRouterProtocol {
     
     func showErrorAlert() {
         let alert = UIAlertController(
-            title: "Error occured", message: nil,
+            title: LS.Common.Strings.errorOccured.localized, message: nil,
             preferredStyle: .alert
         )
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))

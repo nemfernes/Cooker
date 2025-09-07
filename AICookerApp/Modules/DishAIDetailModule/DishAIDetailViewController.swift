@@ -180,6 +180,8 @@ class DishAIDetailViewController: UIViewController {
         DatabaseManager.shared.update(self.dish) {
             self.dish.isAIGenerated = false
         }
+        print(self.dish)
+        self.router?.showSuccessAlert()
     }
 }
 

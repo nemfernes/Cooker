@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "数据将被永久删除";
 "LS.Common.Strings.delete" = "删除";
 "LS.Common.Strings.detail" = "详情";
+"LS.Common.Strings.addToDishes" = "加入我的菜式";
+"LS.Common.Strings.errorOccured" = "發生錯誤";
+"LS.Common.Strings.successAdded" = "成功加入";

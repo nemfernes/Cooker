@@ -65,3 +65,5 @@ and cook something fresh daily";
 "LS.Common.Strings.delete" = "Delete";
 "LS.Common.Strings.detail" = "Details";
 "LS.Common.Strings.addToDishes" = "Add to my dishes";
+"LS.Common.Strings.errorOccured" = "Error occured";
+"LS.Common.Strings.successAdded" = "Successfully added";

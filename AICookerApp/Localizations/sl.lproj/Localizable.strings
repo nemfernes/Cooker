@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "Podatki bodo trajno izbrisani";
 "LS.Common.Strings.delete" = "Izbriši";
 "LS.Common.Strings.detail" = "Podrobnosti";
+"LS.Common.Strings.addToDishes" = "Dodaj k mojim jedem";
+"LS.Common.Strings.errorOccured" = "Prišlo je do napake";
+"LS.Common.Strings.successAdded" = "Uspešno dodano";

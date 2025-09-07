@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "Veriler kalıcı olarak silinecek";
 "LS.Common.Strings.delete" = "Sil";
 "LS.Common.Strings.detail" = "Ayrıntılar";
+"LS.Common.Strings.addToDishes" = "Yemeklerime ekle";
+"LS.Common.Strings.errorOccured" = "Bir hata oluştu";
+"LS.Common.Strings.successAdded" = "Başarıyla eklendi";

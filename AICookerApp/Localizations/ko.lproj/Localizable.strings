@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "데이터는 영구적으로 삭제됩니다";
 "LS.Common.Strings.delete" = "삭제";
 "LS.Common.Strings.detail" = "세부정보";
+"LS.Common.Strings.addToDishes" = "내 요리에 추가";
+"LS.Common.Strings.errorOccured" = "오류가 발생했습니다";
+"LS.Common.Strings.successAdded" = "성공적으로 추가되었습니다";

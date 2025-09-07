@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "Údaje budú natrvalo vymazané";
 "LS.Common.Strings.delete" = "Vymazať";
 "LS.Common.Strings.detail" = "Podrobnosti";
+"LS.Common.Strings.addToDishes" = "Pridať do mojich jedál";
+"LS.Common.Strings.errorOccured" = "Vyskytla sa chyba";
+"LS.Common.Strings.successAdded" = "Úspešne pridané";

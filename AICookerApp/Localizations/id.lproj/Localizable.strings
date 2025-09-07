@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "Data akan dihapus secara permanen";
 "LS.Common.Strings.delete" = "Hapus";
 "LS.Common.Strings.detail" = "Detail";
+"LS.Common.Strings.addToDishes" = "Tambahkan ke hidangan saya";
+"LS.Common.Strings.errorOccured" = "Terjadi kesalahan";
+"LS.Common.Strings.successAdded" = "Berhasil ditambahkan";

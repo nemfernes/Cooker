@@ -185,9 +185,11 @@ class DishesListViewController: BaseViewController, UITextFieldDelegate {
        }
     
     private func loadDishes() {
+        print(DatabaseManager.shared
+            .getAll(Dish.self))
         allDishes = DatabaseManager.shared
             .getAll(Dish.self)
-            .filter("type == %@ AND isAIGenerated == false", dishType.rawValue)
+            .filter("type == %@ AND isAIGenerated == false", dishType.request)
         dishes = allDishes
     }
     

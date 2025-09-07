@@ -59,3 +59,6 @@
 "LS.Common.Strings.dataWill" = "Les dades s’eliminaran permanentment";
 "LS.Common.Strings.delete" = "Eliminar";
 "LS.Common.Strings.detail" = "Detalls";
+"LS.Common.Strings.addToDishes" = "Afegeix als meus plats";
+"LS.Common.Strings.errorOccured" = "S'ha produït un error";
+"LS.Common.Strings.successAdded" = "Afegit correctament";

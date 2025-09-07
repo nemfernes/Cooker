@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "Дані буде видалено назавжди";
 "LS.Common.Strings.delete" = "Видалити";
 "LS.Common.Strings.detail" = "Деталі";
+"LS.Common.Strings.addToDishes" = "Додати до моїх страв";
+"LS.Common.Strings.errorOccured" = "Сталася помилка";
+"LS.Common.Strings.successAdded" = "Успішно додано";

@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "データは完全に削除されます";
 "LS.Common.Strings.delete" = "削除";
 "LS.Common.Strings.detail" = "詳細";
+"LS.Common.Strings.addToDishes" = "マイ料理に追加";
+"LS.Common.Strings.errorOccured" = "エラーが発生しました";
+"LS.Common.Strings.successAdded" = "追加に成功しました";

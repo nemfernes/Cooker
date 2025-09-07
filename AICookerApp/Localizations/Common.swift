@@ -80,6 +80,9 @@ public extension LS.Common {
         case delete = "LS.Common.Strings.delete"
         case detail = "LS.Common.Strings.detail"
         case addToDishes = "LS.Common.Strings.addToDishes"
+        case errorOccured = "LS.Common.Strings.errorOccured"
+        case successAdded = "LS.Common.Strings.successAdded"
+
     }
 }
 

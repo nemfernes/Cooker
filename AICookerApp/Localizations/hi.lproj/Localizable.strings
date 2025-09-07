@@ -62,3 +62,6 @@
 "LS.Common.Strings.dataWill" = "डेटा स्थायी रूप से हटाया जाएगा";
 "LS.Common.Strings.delete" = "हटाएँ";
 "LS.Common.Strings.detail" = "विवरण";
+"LS.Common.Strings.addToDishes" = "मेरे व्यंजनों में जोड़ें";
+"LS.Common.Strings.errorOccured" = "त्रुटि हुई";
+"LS.Common.Strings.successAdded" = "सफलतापूर्वक जोड़ा गया";

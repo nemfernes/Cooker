@@ -193,7 +193,7 @@ class DishCreateEditViewController: BaseViewController {
         } else {
             self.currentDish = Dish()
             self.currentDish.steps.append(StepRealm())
-            self.currentDish.type = dishType.rawValue
+            self.currentDish.type = dishType.request
             self.isEditingExisting = false
         }
         self.dishType = dishType
@@ -270,6 +270,21 @@ class DishCreateEditViewController: BaseViewController {
         photoButtonsView.isHidden = (images.count == 3)
     }
     
+    private func cleanEmptySteps() {
+        DatabaseManager.shared.update(currentDish) {
+            for i in (0..<currentDish.steps.count).reversed() {
+                let step = currentDish.steps[i]
+                let text = step.text.trimmingCharacters(in: .whitespacesAndNewlines)
+                let hasText = !text.isEmpty
+                let hasPhoto = step.photoData != nil
+                if !(hasText) {
+                    currentDish.steps.remove(at: i)
+                    currentDish.realm?.delete(step)
+                }
+            }
+        }
+    }
+    
     private func validateAndMark() -> Bool {
         var isValid = true
         let red = UIColor.red.cgColor
@@ -331,7 +346,7 @@ class DishCreateEditViewController: BaseViewController {
     
     @objc private func saveTapped(_ sender: UIButton) {
         guard validateAndMark() else { return }
-        
+        cleanEmptySteps()
         let name = nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let ingredients = ingredientsTextView.text.trimmingCharacters(in: .whitespacesAndNewlines)
 
